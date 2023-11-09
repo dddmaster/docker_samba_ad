@@ -14,8 +14,11 @@ this runs Samba as active directory with minimal setup and a web interface to ma
 
 # AD Ports
 https://learn.microsoft.com/en-us/troubleshoot/windows-server/identity/config-firewall-for-ad-domains-and-trusts
+
+| client | server | service | 
+| ------------- |:-------------:| -----:|
 | 1024-65535/TCP | 135/TCP | RPC Endpoint Mapper |
-| 1024-65535/TCP | 1024-65535/TCP | RPC für LSA, SAM, NetLogon (*)
+| 1024-65535/TCP | 1024-65535/TCP | RPC for LSA, SAM, NetLogon (*)
 | 1024-65535/TCP/UDP | 389/TCP/UDP | LDAP
 | 1024-65535/TCP | 636/TCP | LDAP SSL
 | 1024-65535/TCP | 3268/TCP | LDAP GC
