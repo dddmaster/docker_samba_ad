@@ -5,7 +5,6 @@ node {
         cleanWs()
         //git branch: 'main', changelog: false, poll: false, url: 'https://github.com/dddmaster/docker_samba_ad.git'
         checkout scm
-}
     }
     stage('test') {
         sh 'ls'
