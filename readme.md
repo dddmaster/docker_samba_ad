@@ -1,5 +1,6 @@
 # About
-this runs Samba as active directory with minimal setup and a web interface to manage users
+Docker image to run Samba as active directory with minimal setup and a web interface to manage users
+
 https://hub.docker.com/r/dddmaster/samba-ad
 
 # Usage
