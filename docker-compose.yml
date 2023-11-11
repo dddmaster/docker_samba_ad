@@ -18,7 +18,7 @@ services:
       - "445:445/tcp"
       - "8080:8080/tcp"
     environment:
-      - DOMAIN="example.com"
-      - ADMINPASS="12qw34er!"
+      - DOMAIN=example.com
+      - ADMINPASS=12qw34er!
 volumes:
   ad-data:
