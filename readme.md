@@ -6,13 +6,17 @@ https://hub.docker.com/r/dddmaster/samba-ad
 # Usage
 - adjust .env file
 - optionally adjust ports to allow active directory ports
-- docker run -p 8080:8080 --hostname ad --env-file .env dddmaster/samba-ad
+- docker run -p 8080:8080 --hostname ad --env-file .env --cap-add SYS_ADMIN dddmaster/samba-ad
+
+  SYS_ADMIN is required for certain samba file privileges. see https://stackoverflow.com/questions/27989751/mount-smb-cifs-share-within-a-docker-container
 
 # Todo
 - change to non root user
 - catch errors during domain provisioning
 - map configuration for dns, admin username etc to environment
 - test internal dns
+- adjust container logging output to include samba log
+- further investigate SYS_ADMIN cap requirement for documentation purpose and optional optimization.
 
 # AD Ports
 https://learn.microsoft.com/en-us/troubleshoot/windows-server/identity/config-firewall-for-ad-domains-and-trusts
