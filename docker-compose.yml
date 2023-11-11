@@ -1,0 +1,24 @@
+version: '3.8'
+services:
+  activeDirectory:
+    container_name: activeDirectory
+    hostname: ad
+    volumes:
+      - 'ad-data:/var/lib/samba'
+    restart: unless-stopped
+    image: 'dddmaster/samba-ad:latest'
+    ports:
+      - "389:389/udp"
+      - "389:389/tcp"
+      - "636:636/tcp"
+      - "3268:3268/tcp"
+      - "3269:3269/tcp"
+      - "88:88/tcp"
+      - "88:88/udp"
+      - "445:445/tcp"
+      - "8080:8080/tcp"
+    environment:
+      - DOMAIN="example.com"
+      - ADMINPASS="12qw34er!"
+volumes:
+  ad-data:
