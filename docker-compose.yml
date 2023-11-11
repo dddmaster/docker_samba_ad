@@ -20,5 +20,8 @@ services:
     environment:
       - DOMAIN=example.com
       - ADMINPASS=12qw34er!
+    # REQUIRED FOR CERTAIN SAMBA FILE ATTRIBUTES  
+    cap_add:
+      - SYS_ADMIN
 volumes:
   ad-data:
